@@ -1,0 +1,12 @@
+<nav>
+  <div class="container">
+    <a href="javascript:void(0)" (click)="toggleMenu()" class="menu-toggle" [class.active]="menuActive">
+      <span></span>
+    </a>
+    <ul [class.active]="menuActive">
+      <li><a href="#" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a href="#" routerLink="dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Dashboard</a></li>
+      <li><a href="#" routerLink="add" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Add</a></li>
+    </ul>
+  </div>
+</nav>

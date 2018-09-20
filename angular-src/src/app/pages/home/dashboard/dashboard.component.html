@@ -1,0 +1,34 @@
+<div class="dashboard container">
+  <h1>Dashboard</h1>
+  <div class="dashboard-content flex"> 
+    <div class="sidebar">
+        <ul>
+          <li>
+              <form [formGroup]="filterResult">
+                <input formControlName="filter" placeholder="Filter" type="text">
+              </form>
+          </li>
+          <li><input [routerLink]="['../add']" class="app-btn app-btn--blue app-btn--block " type="button" value="Add new"></li>
+        </ul>
+      </div>
+      <div class="main-container">
+        <section class="blog-list">
+          <article *ngFor="let blog of textFilter(fiterText);let i = index " class="blog-list__item flex">
+            <div class="image-container"><img src="assets/images/icon-photo.png" alt=""></div>
+            <div class="text-container">
+              <h2>{{blog.title}}</h2>
+              <!-- <p *ngIf="blog.body" [innerHtml]="blog.body | safe: 'html'"></p> -->
+            </div>
+            <div class="controls-container">
+                <ul>
+                  <li><input class="app-btn app-btn--blue app-btn--block " type="button" routerLink="/post/{{blog.id}}" value="Visit page"></li>
+                  <li><input class="app-btn app-btn--blue app-btn--block " type="button" routerLink="/edit/{{blog.id}}" value="Edit"></li>
+                  <li><input class="app-btn app-btn--red app-btn--block " type="button" (click)="deleteBlog(blog.id,i)" value="Delete"></li>
+                </ul>
+            </div>
+          </article>
+        </section>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+<div class="edit container">
+  <h1>Edit blog</h1>
+  <div class="form-container">
+    <app-blog-form *ngIf="formStateData.data" (OutputData)="updateBlog($event)" [formStateData]="formStateData"></app-blog-form>
+  </div>
+</div>

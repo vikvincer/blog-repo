@@ -1,0 +1,13 @@
+<div class="home container">
+  <h1>Home</h1>
+  <section  class="flex container">
+    <article *ngFor="let blog of blogs$;let i = index " class="item">
+      <a routerLink="post/{{blog.id}}"  class="inner">
+       <h1>{{blog.title}}</h1> 
+      </a>
+    </article>
+
+  </section>
+
+
+</div>

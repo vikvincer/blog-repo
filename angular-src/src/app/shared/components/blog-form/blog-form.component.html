@@ -1,0 +1,20 @@
+<div class="blog-form">
+
+    <div class="example-container">
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+            <input formControlName="title" matInput placeholder="* Title">
+            </mat-form-field>
+
+            <div class="mat-form-field-wrapper mat-form-field-wrapper--min-500">
+                <editor formControlName="body"></editor>
+            </div>
+            
+            <div class="mat-form-field-wrapper clearfix">
+                <input class="app-btn app-btn--blue app-btn--blog-save"  type="submit" value="Save">
+            </div>
+
+        </form>
+      </div>
+      
+</div>

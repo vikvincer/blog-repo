@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,700,700i');
+
+$font-muli: 'Muli', sans-serif;
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #020202;
+    font-family: $font-muli;
+}
+
+input {
+    border-radius: 4px;
+    border-style: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.form-container{
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+        display: none;
+    }
+    .mat-form-field {
+        width: 100%;
+    }
+    .mat-form-field-infix {
+        width: 100%;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-infix {
+        border: 1px #e5eaf2 solid;
+        border-radius: 4px;
+        padding: .7375em;
+        font-size: 15px;
+    }
+    .mat-form-field-label-wrapper {
+        left: .4375em !important;
+        top: -8px;
+    }
+    .mat-form-field-type-mat-input {
+        &.mat-focused,&.ng-dirty,&.ng-valid,&.mat-form-field-should-float {
+            .mat-form-field-label-wrapper {
+                left: 0 !important;
+                color: #a6a6a6 !important;
+                top: -0.99995em
+            }
+        }
+    }
+    .mat-form-field-should-float {
+        // background-color: red;
+    }
+}
+.app-btn {
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s;
+    padding: 9px 15px;
+    &.app-btn--block {
+        display: block;
+        width: 100%;
+    }
+    &.app-btn--blue {
+        background-color: #2e3640;
+        &:hover {
+            background-color: #242729;
+        }
+    }
+    &.app-btn--red {
+        background-color: red;
+        &:hover {
+            background-color: #f1583d;
+        }
+    }
+}
+.container {
+    padding: 0 20px;
+}
+.flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  * html .clearfix             { zoom: 1; } /* IE6 */
+  *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+//TinyMice
+.mce-container {
+    iframe {
+        min-height: 350px !important;
+    }
+}
+div.mce-edit-area {
+    min-height: 350px;
+}
